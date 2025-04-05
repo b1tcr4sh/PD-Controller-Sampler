@@ -1,0 +1,14 @@
+#N canvas 47 96 775 648 12;
+#X obj 90 160 hid;
+#X msg 130 80 print;
+#X msg 130 120 refresh;
+#X obj 90 30 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc #000000
+#000000 0;
+#X msg 60 90 open \$1;
+#X obj 30 60 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
