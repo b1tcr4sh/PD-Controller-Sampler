@@ -1,14 +1,137 @@
-#N canvas 47 96 775 648 12;
+#N canvas 264 67 1484 913 12;
 #X obj 90 160 hid;
 #X msg 130 80 print;
 #X msg 130 120 refresh;
-#X obj 90 30 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
 #X msg 60 90 open \$1;
-#X obj 30 60 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
+#X obj 30 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X floatatom 70 40 5 0 0 0 - - -, f 5;
+#X obj 200 220 route abs;
+#X obj 770 210 route key;
+#X obj 10 260 route abs_x;
+#X obj 100 260 route abs_y;
+#X obj 10 290 + 32768;
+#X obj 10 319 / 65535;
+#X obj 10 377 i;
+#X floatatom 10 410 5 0 0 0 - - -, f 5;
+#X obj 100 290 + 32768;
+#X obj 100 319 / 65535;
+#X obj 100 377 i;
+#X floatatom 100 410 5 0 0 0 - - -, f 5;
+#X obj 210 290 + 32768;
+#X obj 210 319 / 65535;
+#X obj 210 377 i;
+#X floatatom 210 410 5 0 0 0 - - -, f 5;
+#X obj 300 290 + 32768;
+#X obj 300 319 / 65535;
+#X obj 300 377 i;
+#X floatatom 300 410 5 0 0 0 - - -, f 5;
+#X obj 210 260 route abs_rx;
+#X obj 300 260 route abs_ry;
+#X obj 10 348 * 127;
+#X obj 100 348 * 127;
+#X obj 210 348 * 127;
+#X obj 300 348 * 127;
+#X obj 700 260 route btn_0;
+#X obj 790 260 route btn_1;
+#X obj 880 260 route btn_2;
+#X obj 970 260 route btn_3;
+#X obj 1060 260 route btn_4;
+#X obj 1150 260 route btn_5;
+#X obj 1240 260 route btn_6;
+#X obj 1330 260 route btn_7;
+#X obj 700 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 790 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 880 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 970 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 1060 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 1150 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 1240 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 1330 290 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 60 210 print;
+#X obj 440 260 route abs_z;
+#X obj 530 260 route abs_rz;
+#X obj 440 290 / 1823;
+#X obj 440 319 * 127;
+#X obj 440 348 i;
+#X floatatom 440 377 5 0 0 0 - - -, f 5;
+#X obj 530 290 / 1823;
+#X obj 530 319 * 127;
+#X obj 530 348 i;
+#X floatatom 530 377 5 0 0 0 - - -, f 5;
+#X obj 700 380 route btn_13;
+#X obj 800 380 route btn_14;
+#X obj 700 409 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 800 409 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X connect 0 0 6 0;
+#X connect 0 0 7 0;
+#X connect 0 0 48 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
-#X connect 3 0 4 0;
+#X connect 3 0 0 0;
 #X connect 4 0 0 0;
-#X connect 5 0 4 0;
+#X connect 5 0 3 0;
+#X connect 6 0 8 0;
+#X connect 6 0 9 0;
+#X connect 6 0 26 0;
+#X connect 6 0 27 0;
+#X connect 6 0 49 0;
+#X connect 6 0 50 0;
+#X connect 7 0 32 0;
+#X connect 7 0 33 0;
+#X connect 7 0 34 0;
+#X connect 7 0 35 0;
+#X connect 7 0 36 0;
+#X connect 7 0 37 0;
+#X connect 7 0 38 0;
+#X connect 7 0 39 0;
+#X connect 7 0 59 0;
+#X connect 7 0 60 0;
+#X connect 8 0 10 0;
+#X connect 9 0 14 0;
+#X connect 10 0 11 0;
+#X connect 11 0 28 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
+#X connect 15 0 29 0;
+#X connect 16 0 17 0;
+#X connect 18 0 19 0;
+#X connect 19 0 30 0;
+#X connect 20 0 21 0;
+#X connect 22 0 23 0;
+#X connect 23 0 31 0;
+#X connect 24 0 25 0;
+#X connect 26 0 18 0;
+#X connect 27 0 22 0;
+#X connect 28 0 12 0;
+#X connect 29 0 16 0;
+#X connect 30 0 20 0;
+#X connect 31 0 24 0;
+#X connect 32 0 40 0;
+#X connect 33 0 41 0;
+#X connect 34 0 42 0;
+#X connect 35 0 43 0;
+#X connect 36 0 44 0;
+#X connect 37 0 45 0;
+#X connect 38 0 46 0;
+#X connect 39 0 47 0;
+#X connect 49 0 51 0;
+#X connect 50 0 55 0;
+#X connect 51 0 52 0;
+#X connect 52 0 53 0;
+#X connect 53 0 54 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 59 0 61 0;
+#X connect 60 0 62 0;
