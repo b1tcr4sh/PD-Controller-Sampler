@@ -1,0 +1,11 @@
+#N canvas 36 49 1560 950 12;
+#X obj 40 220 r stick;
+#X obj 110 220 r trigger;
+#X obj 200 220 r btn;
+#X obj 40 249 print;
+#X obj 110 250 print;
+#X obj 200 250 print;
+#X obj 40 20 controller;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
