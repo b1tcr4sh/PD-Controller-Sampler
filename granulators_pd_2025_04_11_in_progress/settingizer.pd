@@ -1,0 +1,24 @@
+#N canvas 392 357 613 389 10;
+#X obj 57 43 inlet;
+#X obj 106 43 r \$1;
+#X obj 56 128 float \$2;
+#X obj 56 326 outlet;
+#X floatatom 56 294 5 0 0 0 - - -;
+#X obj 57 241 clip \$3 \$4;
+#X obj 155 42 loadbang;
+#X obj 230 44 r \$5;
+#X obj 229 69 t b;
+#X text 317 244 arguments \; receive-symbol \; default-level \; min
+level \; max level \; bang-it-out symbol;
+#X obj 312 53 inlet;
+#X obj 367 53 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 2 0;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 10 0 5 1;
+#X connect 11 0 5 2;

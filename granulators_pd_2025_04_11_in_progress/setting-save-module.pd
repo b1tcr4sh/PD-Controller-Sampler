@@ -1,0 +1,68 @@
+#N canvas 178 22 935 682 10;
+#X text 67 10 will take arguments \$0 \, \$1 (name) \, and list of
+[name-stem1 \, name-stem2 \, name-stem3 ...] from parent patch (in
+this example \, it would go inside midi-learn.pd) \; will receive \$0-namestem1
+\, \$0-namestem2 \, etc \, and copy these messages on in the form "setting-save
+\$1 name-stem1 [value1 value2 value3 ... ]" \; will receive "setting-recall
+\$1 name-stem1 [value1 value2 value3 ... ]" and pass it on as "\$0-namestem1
+[value1 value2 value3 ... ]" \; this allows a central repository for
+local variables' values \; will respond to "setting-refresh" by sending
+out all latest values again (will require internal memory ... hmm ...)
+\;;
+#X obj 516 116 dollarg;
+#N canvas 622 523 450 300 \$0-store 0;
+#X obj 50 500;
+#X obj 50 550;
+#X obj 50 600;
+#X obj 50 650;
+#X obj 50 700;
+#X obj 50 750;
+#X obj 50 800;
+#X obj 50 850;
+#X obj 50 900;
+#X obj 50 950;
+#X obj 50 1000;
+#X obj 50 1050;
+#X obj 50 50 r mother;
+#X obj 50 100 r your;
+#X obj 50 150 r fuck;
+#X obj 50 50 r mother;
+#X obj 50 100 r your;
+#X obj 50 150 r fuck;
+#X restore 443 307 pd \$0-store;
+#X obj 503 216 s \$0-store;
+#X obj 489 56 loadbang;
+#X obj 489 85 t b b;
+#X obj 225 278 list split 1;
+#X obj 263 231 list prepend;
+#X obj 202 417 * 50;
+#X obj 216 311 t b s;
+#X obj 222 473 pack 0 s;
+#X obj 221 600 s pd-\$0-store;
+#X msg 221 500 obj 50 \$1 r \$2;
+#N canvas 523 441 490 350 \$0-store 0;
+#X obj 50 50 r mother;
+#X obj 50 100 r your;
+#X obj 50 150 r fuck;
+#X obj 50 50 r mother;
+#X obj 50 100 r your;
+#X obj 50 150 r fuck;
+#X restore 366 277 pd \$0-store;
+#X obj 202 369 float;
+#X obj 202 391 + 1;
+#X obj 490 149 until;
+#X msg 261 195 test_message;
+#X connect 4 0 5 0;
+#X connect 5 1 1 0;
+#X connect 6 0 9 0;
+#X connect 6 1 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 10 0;
+#X connect 9 0 14 0;
+#X connect 9 1 10 1;
+#X connect 10 0 12 0;
+#X connect 12 0 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 14 1;
+#X connect 15 0 8 0;
+#X connect 17 0 7 0;

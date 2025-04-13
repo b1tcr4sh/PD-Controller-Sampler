@@ -1,0 +1,56 @@
+#N canvas 376 103 687 494 10;
+#X obj 140 163 r setting-save;
+#X obj 259 367 textfile;
+#X msg 316 214 rewind;
+#X obj 276 166 t b b;
+#X obj 263 216 until;
+#X obj 145 111 bng 15 250 50 0 empty empty recall 0 -5 0 10 -262144
+-1 -1;
+#X obj 145 141 bng 15 250 50 0 empty empty refresh 0 -5 0 10 -262144
+-1 -1;
+#X obj 383 159 t b b;
+#X obj 385 185 s setting-refresh;
+#X obj 138 220 list trim;
+#X obj 102 141 bng 15 250 50 0 empty empty write 0 -5 0 10 -262144
+-1 -1;
+#X obj 114 264 symbol \$1;
+#X obj 428 18 loadbang;
+#X msg 546 289 read ./\$1;
+#X obj 258 400 s setting-recall;
+#X obj 111 323 list prepend write;
+#X obj 113 346 list trim;
+#X obj 545 255 symbol \$1;
+#X msg 410 215 clear;
+#X obj 102 110 bng 15 250 50 0 empty empty read 0 -5 0 10 -262144 -1
+-1;
+#X obj 434 72 t b b;
+#X obj 139 192 list prepend add;
+#X obj 428 43 del 200;
+#X obj 432 121 del 200;
+#X connect 0 0 21 0;
+#X connect 1 0 14 0;
+#X connect 1 1 4 1;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 3 1 2 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 18 0;
+#X connect 9 0 1 0;
+#X connect 10 0 11 0;
+#X connect 11 0 15 0;
+#X connect 12 0 22 0;
+#X connect 13 0 1 0;
+#X connect 15 0 16 0;
+#X connect 16 0 1 0;
+#X connect 17 0 13 0;
+#X connect 18 0 1 0;
+#X connect 19 0 17 0;
+#X connect 20 0 23 0;
+#X connect 20 1 19 0;
+#X connect 21 0 9 0;
+#X connect 22 0 20 0;
+#X connect 23 0 5 0;
+#X coords 0 -1 1 1 88 58 2 100 100;

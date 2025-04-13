@@ -1,0 +1,16 @@
+#N canvas 0 22 565 532 10;
+#X obj 162 154 expr int ($f1 + 0.5);
+#X obj 97 277 random;
+#X obj 162 207 + 1;
+#X obj 95 64 inlet;
+#X obj 162 65 inlet;
+#X obj 99 386 outlet;
+#X obj 162 109 * 10000;
+#X obj 114 334 / 10000;
+#X connect 0 0 2 0;
+#X connect 1 0 7 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 5 0;

@@ -1,0 +1,44 @@
+#N canvas 205 130 746 612 10;
+#X obj 111 262 tgl 15 0 empty empty on/off 20 4 0 10 -262144 -1 -1
+1 1;
+#X obj 335 140 loadbang;
+#X text 104 656 feeds the "signal view";
+#X obj 56 460 tabwrite~ \$0-signal_view;
+#X obj 197 262 nbx 5 14 1 64 0 0 empty empty resize 60 4 0 10 -262144
+-1 -1 52 256;
+#X obj 18 265 inlet~;
+#X obj 102 101 cnv 15 200 15 empty empty OSCILLOSCOPE 100 8 0 14 -1
+-262144 0;
+#X obj 315 409 float \$0;
+#X obj 318 384 t b f;
+#X obj 314 433 pack;
+#X msg 312 458 \; \$1-signal_view resize \$2;
+#N canvas 0 22 458 308 (subpatch) 0;
+#X array \$0-signal_view 3328 float 2;
+#X coords 0 1 3328 -1 200 140 1;
+#X restore 102 118 graph;
+#X obj 333 243 samplerate~;
+#X obj 334 181 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 333 300 5 0 0 0 - - -;
+#X obj 334 274 / 512;
+#X obj 312 362 * 64;
+#X obj 87 337 bang~;
+#X obj 97 386 spigot 1;
+#X obj 517 61 block~ 4096;
+#X connect 0 0 18 1;
+#X connect 1 0 0 0;
+#X connect 1 0 13 0;
+#X connect 4 0 16 0;
+#X connect 5 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 8 1 9 1;
+#X connect 9 0 10 0;
+#X connect 12 0 15 0;
+#X connect 13 0 12 0;
+#X connect 15 0 14 0;
+#X connect 16 0 8 0;
+#X connect 17 0 18 0;
+#X connect 18 0 3 0;
+#X coords 0 -1 1 1 204 180 2 100 100;
