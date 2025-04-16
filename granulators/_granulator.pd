@@ -1,4 +1,4 @@
-#N canvas 292 38 1436 845 10;
+#N canvas 847 41 829 996 10;
 #X declare -path . -path .. -path ../main-lib;
 #X obj 155 572 s grains-off;
 #X obj 155 521 bng 45 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
@@ -195,3 +195,4 @@
 #X connect 15 0 16 0;
 #X connect 18 0 24 0;
 #X connect 22 0 21 0;
+#X coords 0 -1 1 1 1450 600 1 0 0;
