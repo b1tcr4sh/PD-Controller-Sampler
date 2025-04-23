@@ -1,4 +1,4 @@
-#N canvas 1931 41 2738 1356 12;
+#N canvas 11 41 1652 996 12;
 #X obj 15 29 controller;
 #X obj 1091 29 granulators/_granulator;
 #X obj 35 835 osc~ 440;
